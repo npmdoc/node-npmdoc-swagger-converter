@@ -1,0 +1,198 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api-documentation for
+    <a
+        
+        href="https://github.com/apigee-127/swagger-converter"
+        
+    >swagger-converter (v1.4.1)</a>
+</h1>
+<h4>Converts Swagger documents from version 1.x to version 2.0</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.swagger-converter">module swagger-converter</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-converter.convert">
+            function <span class="apidocSignatureSpan">swagger-converter.</span>convert
+            <span class="apidocSignatureSpan">(resourceListing, apiDeclarations, options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-converter.listApiDeclarations">
+            function <span class="apidocSignatureSpan">swagger-converter.</span>listApiDeclarations
+            <span class="apidocSignatureSpan">(sourceUrl, resourceListing)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+    
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.swagger-converter" id="apidoc.module.swagger-converter">module swagger-converter</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.swagger-converter.convert" id="apidoc.element.swagger-converter.convert">
+        function <span class="apidocSignatureSpan">swagger-converter.</span>convert
+        <span class="apidocSignatureSpan">(resourceListing, apiDeclarations, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">convert = function (resourceListing, apiDeclarations, options) {
+  if (Array.isArray(apiDeclarations)) {
+    throw new SwaggerConverterError(
+      &#x27;Second argument(apiDeclarations) should be plain object, &#x27; +
+      &#x27;see release notes.&#x27;);
+  }
+
+  var converter = new Converter();
+  converter.options = options || {};
+  return converter.convert(resourceListing, apiDeclarations);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var apiDeclarations = {
+  &#x27;/pet&#x27;: require(&#x27;/path/to/petstore/pet.json&#x27;),
+  &#x27;/user&#x27;: require(&#x27;/path/to/petstore/user.json&#x27;),
+  &#x27;/store&#x27;: require(&#x27;/path/to/petstore/store.json&#x27;)
+};
+
+var swagger2Document = swaggerConverter.<span class="apidocCodeKeywordSpan">convert</span>(resourceListing, apiDeclarations);
+
+console.log(JSON.stringify(swagger2Document, null, 2));
+```
+
+##### listApiDeclarations function
+`listApiDeclarations` function accept following arguments:
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.swagger-converter.listApiDeclarations" id="apidoc.element.swagger-converter.listApiDeclarations">
+        function <span class="apidocSignatureSpan">swagger-converter.</span>listApiDeclarations
+        <span class="apidocSignatureSpan">(sourceUrl, resourceListing)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listApiDeclarations = function (sourceUrl, resourceListing) {
+<span class="apidocCodeCommentSpan">  /*
+   * Warning: This code is intended to cover us much as possible real-life
+   * cases and was tested using hundreds of public Swagger documents. If you
+   * change code please do not introduce any breaking changes.
+   * Possible workaround: you can alter algorithm by add/change &#x27;basePath&#x27;
+   * before passing it into this function.
+  */
+</span>  sourceUrl = URI(sourceUrl || &#x27;&#x27;).query(&#x27;&#x27;);
+
+  var baseUrl = URI(resourceListing.basePath || &#x27;&#x27;);
+  if (baseUrl.is(&#x27;relative&#x27;)) {
+    baseUrl = baseUrl.absoluteTo(sourceUrl);
+  }
+
+  if (resourceListing.swaggerVersion === &#x27;1.0&#x27; &#x26;&#x26; baseUrl.suffix() === &#x27;json&#x27;) {
+    baseUrl.filename(&#x27;&#x27;);
+  }
+
+  var result = {};
+  resourceListing.apis.forEach(function(api) {
+    // skip embedded documents
+    if (!isValue(api.path) || isValue(api.operations)) {
+      return;
+    }
+
+    var resourceUrl = URI(api.path.replace(&#x27;{format}&#x27;, &#x27;json&#x27;));
+    if (resourceUrl.is(&#x27;relative&#x27;)) {
+      resourceUrl = URI(baseUrl.href() + resourceUrl.href());
+    }
+    result[api.path] = resourceUrl.normalize().href();
+  });
+
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `resourceListing`(required) - root Swagger 1.x document
+
+```javascript
+var swaggerConverter = require(&#x27;swagger-converter&#x27;);
+
+var resourceListing = require(&#x27;/path/to/petstore/index.json&#x27;);
+
+var apiDeclarations = swaggerConverter.<span class="apidocCodeKeywordSpan">listApiDeclarations</span>(&#x27;http://test.com/api-\
+docs&#x27;, resourceListing);
+
+console.log(JSON.stringify(apiDeclarations, null, 2));
+/*
+{
+&#x22;/pet&#x22;: &#x22;http://test.com/api-docs/pet&#x22;,
+&#x22;/user&#x22;: &#x22;http://test.com/api-docs/user&#x22;,
+&#x22;/store&#x22;: &#x22;http://test.com/api-docs/store&#x22;
+...</pre></li>
+    </ul>
+    
+    
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
