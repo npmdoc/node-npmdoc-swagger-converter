@@ -46,11 +46,11 @@
     font-weight: bold;
 }
 </style>
-<h1>api-documentation for
+<h1>api documentation for
     <a
-        
+
         href="https://github.com/apigee-127/swagger-converter"
-        
+
     >swagger-converter (v1.4.1)</a>
 </h1>
 <h4>Converts Swagger documents from version 1.x to version 2.0</h4>
@@ -58,35 +58,35 @@
     href="#apidoc.tableOfContents"
     id="apidoc.tableOfContents"
 ><h1>table of contents</h1></a><ol>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.swagger-converter">module swagger-converter</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.swagger-converter.convert">
             function <span class="apidocSignatureSpan">swagger-converter.</span>convert
             <span class="apidocSignatureSpan">(resourceListing, apiDeclarations, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.swagger-converter.listApiDeclarations">
             function <span class="apidocSignatureSpan">swagger-converter.</span>listApiDeclarations
             <span class="apidocSignatureSpan">(sourceUrl, resourceListing)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.swagger-converter" id="apidoc.module.swagger-converter">module swagger-converter</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.swagger-converter.convert" id="apidoc.element.swagger-converter.convert">
         function <span class="apidocSignatureSpan">swagger-converter.</span>convert
@@ -122,9 +122,9 @@ console.log(JSON.stringify(swagger2Document, null, 2));
 `listApiDeclarations` function accept following arguments:
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.swagger-converter.listApiDeclarations" id="apidoc.element.swagger-converter.listApiDeclarations">
         function <span class="apidocSignatureSpan">swagger-converter.</span>listApiDeclarations
@@ -175,7 +175,7 @@ var swaggerConverter = require(&#x27;swagger-converter&#x27;);
 
 var resourceListing = require(&#x27;/path/to/petstore/index.json&#x27;);
 
-var apiDeclarations = swaggerConverter.<span class="apidocCodeKeywordSpan">listApiDeclarations</span>(&#x27;http://test.com/api-\
+var apiDeclarations = swaggerConverter.<span class="apidocCodeKeywordSpan">listApiDeclarations</span>(&#x27;http://test.com/api-
 docs&#x27;, resourceListing);
 
 console.log(JSON.stringify(apiDeclarations, null, 2));
@@ -186,8 +186,8 @@ console.log(JSON.stringify(apiDeclarations, null, 2));
 &#x22;/store&#x22;: &#x22;http://test.com/api-docs/store&#x22;
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocFooterDiv">
