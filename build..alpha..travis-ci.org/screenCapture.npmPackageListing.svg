@@ -1,35 +1,35 @@
 <svg height="510" width="720" xmlns="http://www.w3.org/2000/svg">
 <rect height="510" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">  0.  2017-04-07 19:09:28 +0000   369512 bytes  .</tspan>
-<tspan x="10" y="42">  1.  2017-04-07 19:09:28 +0000     1084 bytes  LICENSE</tspan>
-<tspan x="10" y="58">  2.  2017-04-07 19:09:28 +0000     4135 bytes  README.md</tspan>
-<tspan x="10" y="74">  3.  2017-04-07 19:09:28 +0000      410 bytes  bower.json</tspan>
-<tspan x="10" y="90">  4.  2017-04-07 19:09:28 +0000   155596 bytes  browser.js</tspan>
-<tspan x="10" y="106">  5.  2017-04-07 19:09:28 +0000    87295 bytes  browser.min.js</tspan>
-<tspan x="10" y="122">  6.  2017-04-07 19:09:28 +0000    30242 bytes  index.js</tspan>
-<tspan x="10" y="138">  7.  2017-04-07 19:09:28 +0000     3224 bytes  package.json</tspan>
-<tspan x="10" y="154">  8.  2017-04-07 19:09:28 +0000      166 bytes  test/input/complex-models/index.json</tspan>
-<tspan x="10" y="170">  9.  2017-04-07 19:09:28 +0000     1889 bytes  test/input/complex-models/projects.json</tspan>
-<tspan x="10" y="186"> 10.  2017-04-07 19:09:28 +0000     1771 bytes  test/input/complex-parameters/index.json</tspan>
-<tspan x="10" y="202"> 11.  2017-04-07 19:09:28 +0000      479 bytes  test/input/embedded/index.json</tspan>
-<tspan x="10" y="218"> 12.  2017-04-07 19:09:28 +0000      280 bytes  test/input/fixable/index.json</tspan>
-<tspan x="10" y="234"> 13.  2017-04-07 19:09:28 +0000     1893 bytes  test/input/fixable/pets.json</tspan>
-<tspan x="10" y="250"> 14.  2017-04-07 19:09:28 +0000      403 bytes  test/input/fixable/stores.json</tspan>
-<tspan x="10" y="266"> 15.  2017-04-07 19:09:28 +0000      239 bytes  test/input/minimal/index.json</tspan>
-<tspan x="10" y="282"> 16.  2017-04-07 19:09:28 +0000      411 bytes  test/input/minimal/pets.json</tspan>
-<tspan x="10" y="298"> 17.  2017-04-07 19:09:28 +0000      401 bytes  test/input/minimal/stores.json</tspan>
-<tspan x="10" y="314"> 18.  2017-04-07 19:09:28 +0000     1944 bytes  test/input/petstore/index.json</tspan>
-<tspan x="10" y="330"> 19.  2017-04-07 19:09:28 +0000    10788 bytes  test/input/petstore/pet.json</tspan>
-<tspan x="10" y="346"> 20.  2017-04-07 19:09:28 +0000     3763 bytes  test/input/petstore/store.json</tspan>
-<tspan x="10" y="362"> 21.  2017-04-07 19:09:28 +0000     7840 bytes  test/input/petstore/user.json</tspan>
-<tspan x="10" y="378"> 22.  2017-04-07 19:09:28 +0000     2716 bytes  test/output/complex-models.json</tspan>
-<tspan x="10" y="394"> 23.  2017-04-07 19:09:28 +0000     2393 bytes  test/output/complex-parameters-multi.json</tspan>
-<tspan x="10" y="410"> 24.  2017-04-07 19:09:28 +0000     2287 bytes  test/output/complex-parameters.json</tspan>
-<tspan x="10" y="426"> 25.  2017-04-07 19:09:28 +0000      526 bytes  test/output/embedded.json</tspan>
-<tspan x="10" y="442"> 26.  2017-04-07 19:09:28 +0000     3273 bytes  test/output/fixable.json</tspan>
-<tspan x="10" y="458"> 27.  2017-04-07 19:09:28 +0000      942 bytes  test/output/minimal.json</tspan>
-<tspan x="10" y="474"> 28.  2017-04-07 19:09:28 +0000    34823 bytes  test/output/petstore.json</tspan>
-<tspan x="10" y="490"> 29.  2017-04-07 19:09:28 +0000     8299 bytes  test/test.js</tspan>
+<tspan x="10" y="26">  0.  2017-04-07 19:10:58 +0000   369512 bytes  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-07 19:10:58 +0000     1084 bytes  LICENSE</tspan>
+<tspan x="10" y="58">  2.  2017-04-07 19:10:58 +0000     4135 bytes  README.md</tspan>
+<tspan x="10" y="74">  3.  2017-04-07 19:10:58 +0000      410 bytes  bower.json</tspan>
+<tspan x="10" y="90">  4.  2017-04-07 19:10:58 +0000   155596 bytes  browser.js</tspan>
+<tspan x="10" y="106">  5.  2017-04-07 19:10:58 +0000    87295 bytes  browser.min.js</tspan>
+<tspan x="10" y="122">  6.  2017-04-07 19:10:58 +0000    30242 bytes  index.js</tspan>
+<tspan x="10" y="138">  7.  2017-04-07 19:10:58 +0000     3224 bytes  package.json</tspan>
+<tspan x="10" y="154">  8.  2017-04-07 19:10:58 +0000      166 bytes  test/input/complex-models/index.json</tspan>
+<tspan x="10" y="170">  9.  2017-04-07 19:10:58 +0000     1889 bytes  test/input/complex-models/projects.json</tspan>
+<tspan x="10" y="186"> 10.  2017-04-07 19:10:58 +0000     1771 bytes  test/input/complex-parameters/index.json</tspan>
+<tspan x="10" y="202"> 11.  2017-04-07 19:10:58 +0000      479 bytes  test/input/embedded/index.json</tspan>
+<tspan x="10" y="218"> 12.  2017-04-07 19:10:58 +0000      280 bytes  test/input/fixable/index.json</tspan>
+<tspan x="10" y="234"> 13.  2017-04-07 19:10:58 +0000     1893 bytes  test/input/fixable/pets.json</tspan>
+<tspan x="10" y="250"> 14.  2017-04-07 19:10:58 +0000      403 bytes  test/input/fixable/stores.json</tspan>
+<tspan x="10" y="266"> 15.  2017-04-07 19:10:58 +0000      239 bytes  test/input/minimal/index.json</tspan>
+<tspan x="10" y="282"> 16.  2017-04-07 19:10:58 +0000      411 bytes  test/input/minimal/pets.json</tspan>
+<tspan x="10" y="298"> 17.  2017-04-07 19:10:58 +0000      401 bytes  test/input/minimal/stores.json</tspan>
+<tspan x="10" y="314"> 18.  2017-04-07 19:10:58 +0000     1944 bytes  test/input/petstore/index.json</tspan>
+<tspan x="10" y="330"> 19.  2017-04-07 19:10:58 +0000    10788 bytes  test/input/petstore/pet.json</tspan>
+<tspan x="10" y="346"> 20.  2017-04-07 19:10:58 +0000     3763 bytes  test/input/petstore/store.json</tspan>
+<tspan x="10" y="362"> 21.  2017-04-07 19:10:58 +0000     7840 bytes  test/input/petstore/user.json</tspan>
+<tspan x="10" y="378"> 22.  2017-04-07 19:10:58 +0000     2716 bytes  test/output/complex-models.json</tspan>
+<tspan x="10" y="394"> 23.  2017-04-07 19:10:58 +0000     2393 bytes  test/output/complex-parameters-multi.json</tspan>
+<tspan x="10" y="410"> 24.  2017-04-07 19:10:58 +0000     2287 bytes  test/output/complex-parameters.json</tspan>
+<tspan x="10" y="426"> 25.  2017-04-07 19:10:58 +0000      526 bytes  test/output/embedded.json</tspan>
+<tspan x="10" y="442"> 26.  2017-04-07 19:10:58 +0000     3273 bytes  test/output/fixable.json</tspan>
+<tspan x="10" y="458"> 27.  2017-04-07 19:10:58 +0000      942 bytes  test/output/minimal.json</tspan>
+<tspan x="10" y="474"> 28.  2017-04-07 19:10:58 +0000    34823 bytes  test/output/petstore.json</tspan>
+<tspan x="10" y="490"> 29.  2017-04-07 19:10:58 +0000     8299 bytes  test/test.js</tspan>
 </text>
 </svg>
