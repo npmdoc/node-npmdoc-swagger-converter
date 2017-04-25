@@ -134,20 +134,21 @@
   return converter.convert(resourceListing, apiDeclarations);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
+   throw new SwaggerConverterError(
+     &#x27;Second argument(apiDeclarations) should be plain object, &#x27; +
+     &#x27;see release notes.&#x27;);
+ }
 
-var apiDeclarations = {
-  &#x27;/pet&#x27;: require(&#x27;/path/to/petstore/pet.json&#x27;),
-  &#x27;/user&#x27;: require(&#x27;/path/to/petstore/user.json&#x27;),
-  &#x27;/store&#x27;: require(&#x27;/path/to/petstore/store.json&#x27;)
+ var converter = new Converter();
+ converter.options = options || {};
+ return converter.<span class="apidocCodeKeywordSpan">convert</span>(resourceListing, apiDeclarations);
 };
 
-var swagger2Document = swaggerConverter.<span class="apidocCodeKeywordSpan">convert</span>(resourceListing, apiDeclarations);
+var Converter = function() {};
+var prototype = Converter.prototype;
 
-console.log(JSON.stringify(swagger2Document, null, 2));
-```
-
-##### listApiDeclarations function
-`listApiDeclarations` function accept following arguments:
+/*
+* Converts Swagger 1.x specs file to Swagger 2.0 specs.
 ...</pre></li>
     </ul>
 
@@ -195,24 +196,7 @@ console.log(JSON.stringify(swagger2Document, null, 2));
 
   return result;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-* `resourceListing`(required) - root Swagger 1.x document
-
-```javascript
-var swaggerConverter = require(&#x27;swagger-converter&#x27;);
-
-var resourceListing = require(&#x27;/path/to/petstore/index.json&#x27;);
-
-var apiDeclarations = swaggerConverter.<span class="apidocCodeKeywordSpan">listApiDeclarations</span>(&#x27;http://test.com/api-
-docs&#x27;, resourceListing);
-
-console.log(JSON.stringify(apiDeclarations, null, 2));
-/*
-{
-&#x22;/pet&#x22;: &#x22;http://test.com/api-docs/pet&#x22;,
-&#x22;/user&#x22;: &#x22;http://test.com/api-docs/user&#x22;,
-&#x22;/store&#x22;: &#x22;http://test.com/api-docs/store&#x22;
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -243,20 +227,21 @@ console.log(JSON.stringify(apiDeclarations, null, 2));
   return converter.convert(resourceListing, apiDeclarations);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
+   throw new SwaggerConverterError(
+     &#x27;Second argument(apiDeclarations) should be plain object, &#x27; +
+     &#x27;see release notes.&#x27;);
+ }
 
-var apiDeclarations = {
-  &#x27;/pet&#x27;: require(&#x27;/path/to/petstore/pet.json&#x27;),
-  &#x27;/user&#x27;: require(&#x27;/path/to/petstore/user.json&#x27;),
-  &#x27;/store&#x27;: require(&#x27;/path/to/petstore/store.json&#x27;)
+ var converter = new Converter();
+ converter.options = options || {};
+ return converter.<span class="apidocCodeKeywordSpan">convert</span>(resourceListing, apiDeclarations);
 };
 
-var swagger2Document = swaggerConverter.<span class="apidocCodeKeywordSpan">convert</span>(resourceListing, apiDeclarations);
+var Converter = function() {};
+var prototype = Converter.prototype;
 
-console.log(JSON.stringify(swagger2Document, null, 2));
-```
-
-##### listApiDeclarations function
-`listApiDeclarations` function accept following arguments:
+/*
+* Converts Swagger 1.x specs file to Swagger 2.0 specs.
 ...</pre></li>
     </ul>
 
@@ -304,24 +289,7 @@ console.log(JSON.stringify(swagger2Document, null, 2));
 
   return result;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-* `resourceListing`(required) - root Swagger 1.x document
-
-```javascript
-var swaggerConverter = require(&#x27;swagger-converter&#x27;);
-
-var resourceListing = require(&#x27;/path/to/petstore/index.json&#x27;);
-
-var apiDeclarations = swaggerConverter.<span class="apidocCodeKeywordSpan">listApiDeclarations</span>(&#x27;http://test.com/api-
-docs&#x27;, resourceListing);
-
-console.log(JSON.stringify(apiDeclarations, null, 2));
-/*
-{
-&#x22;/pet&#x22;: &#x22;http://test.com/api-docs/pet&#x22;,
-&#x22;/user&#x22;: &#x22;http://test.com/api-docs/user&#x22;,
-&#x22;/store&#x22;: &#x22;http://test.com/api-docs/store&#x22;
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 

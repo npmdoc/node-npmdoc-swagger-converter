@@ -127,20 +127,21 @@
   return converter.convert(resourceListing, apiDeclarations);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
+   throw new SwaggerConverterError(
+     'Second argument(apiDeclarations) should be plain object, ' +
+     'see release notes.');
+ }
 
-var apiDeclarations = {
-  '/pet': require('/path/to/petstore/pet.json'),
-  '/user': require('/path/to/petstore/user.json'),
-  '/store': require('/path/to/petstore/store.json')
+ var converter = new Converter();
+ converter.options = options || {};
+ return converter.<span class="apidocCodeKeywordSpan">convert</span>(resourceListing, apiDeclarations);
 };
 
-var swagger2Document = swaggerConverter.<span class="apidocCodeKeywordSpan">convert</span>(resourceListing, apiDeclarations);
+var Converter = function() {};
+var prototype = Converter.prototype;
 
-console.log(JSON.stringify(swagger2Document, null, 2));
-```
-
-##### listApiDeclarations function
-`listApiDeclarations` function accept following arguments:
+/*
+* Converts Swagger 1.x specs file to Swagger 2.0 specs.
 ...</pre></li>
     </ul>
 
@@ -188,24 +189,7 @@ console.log(JSON.stringify(swagger2Document, null, 2));
 
   return result;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-* `resourceListing`(required) - root Swagger 1.x document
-
-```javascript
-var swaggerConverter = require('swagger-converter');
-
-var resourceListing = require('/path/to/petstore/index.json');
-
-var apiDeclarations = swaggerConverter.<span class="apidocCodeKeywordSpan">listApiDeclarations</span>('http://test.com/api-
-docs', resourceListing);
-
-console.log(JSON.stringify(apiDeclarations, null, 2));
-/*
-{
-"/pet": "http://test.com/api-docs/pet",
-"/user": "http://test.com/api-docs/user",
-"/store": "http://test.com/api-docs/store"
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -236,20 +220,21 @@ console.log(JSON.stringify(apiDeclarations, null, 2));
   return converter.convert(resourceListing, apiDeclarations);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
+   throw new SwaggerConverterError(
+     'Second argument(apiDeclarations) should be plain object, ' +
+     'see release notes.');
+ }
 
-var apiDeclarations = {
-  '/pet': require('/path/to/petstore/pet.json'),
-  '/user': require('/path/to/petstore/user.json'),
-  '/store': require('/path/to/petstore/store.json')
+ var converter = new Converter();
+ converter.options = options || {};
+ return converter.<span class="apidocCodeKeywordSpan">convert</span>(resourceListing, apiDeclarations);
 };
 
-var swagger2Document = swaggerConverter.<span class="apidocCodeKeywordSpan">convert</span>(resourceListing, apiDeclarations);
+var Converter = function() {};
+var prototype = Converter.prototype;
 
-console.log(JSON.stringify(swagger2Document, null, 2));
-```
-
-##### listApiDeclarations function
-`listApiDeclarations` function accept following arguments:
+/*
+* Converts Swagger 1.x specs file to Swagger 2.0 specs.
 ...</pre></li>
     </ul>
 
@@ -297,24 +282,7 @@ console.log(JSON.stringify(swagger2Document, null, 2));
 
   return result;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-* `resourceListing`(required) - root Swagger 1.x document
-
-```javascript
-var swaggerConverter = require('swagger-converter');
-
-var resourceListing = require('/path/to/petstore/index.json');
-
-var apiDeclarations = swaggerConverter.<span class="apidocCodeKeywordSpan">listApiDeclarations</span>('http://test.com/api-
-docs', resourceListing);
-
-console.log(JSON.stringify(apiDeclarations, null, 2));
-/*
-{
-"/pet": "http://test.com/api-docs/pet",
-"/user": "http://test.com/api-docs/user",
-"/store": "http://test.com/api-docs/store"
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
